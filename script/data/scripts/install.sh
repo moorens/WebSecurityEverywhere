@@ -15,7 +15,7 @@ echo "- Done"
 
 echo "### Preparing next boot... ###"
 sudo echo '#!/bin/sh -e
-sudo python /home/pi/WebSecurityEverywhere/script/unjailpi/start.py
+sudo python /home/pi/WebSecurityEverywhere/script/unjailpi/start.py &
 
 _IP=$(hostname -I) || true
 if [ "$_IP" ]; then

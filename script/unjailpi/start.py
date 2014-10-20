@@ -482,8 +482,7 @@ def generateKey(lenght):
 	f = os.popen("dd if=/dev/random bs=1 count="+str(count)+" 2>/dev/null|xxd -ps")
 	for i in f.readlines():
 		i = i.rstrip('\n')
-		key = i
-	return key
+	return i
 	
 def write_hostapdConfig(file):
 	data = "ctrl_interface="+hostapdConfig['global']['ctrl_interface']+"\n"
