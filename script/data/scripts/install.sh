@@ -14,7 +14,7 @@ sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server
 echo "- Done"
 
 echo "### Preparing next boot... ###"
-sudo echo "#!/bin/sh -e
+sudo echo '#!/bin/sh -e
 sudo python /home/pi/WebSecurityEverywhere/script/unjailpi/start.py
 
 _IP=$(hostname -I) || true
@@ -23,7 +23,7 @@ if [ "$_IP" ]; then
 fi
 
 exit 0
-" > /etc/rc.local
+' > /etc/rc.local
 echo "- Done"
 
 sudo reboot

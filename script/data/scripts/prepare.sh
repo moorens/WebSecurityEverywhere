@@ -81,7 +81,7 @@ echo "# blacklist spi and i2c by default (many users don't need them)
 echo "- Done"
 
 echo "### Preparing next boot... ###"
-sudo echo "#!/bin/sh -e
+sudo echo '#!/bin/sh -e
 sudo sh /home/pi/WebSecurityEverywhere/script/data/scripts/install.sh
 
 _IP=$(hostname -I) || true
@@ -90,7 +90,7 @@ if [ "$_IP" ]; then
 fi
 
 exit 0
-" > /etc/rc.local
+' > /etc/rc.local
 echo "- Done"
 
 sudo reboot
