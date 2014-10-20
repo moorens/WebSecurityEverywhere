@@ -77,7 +77,7 @@ echo "quiet dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext
 echo "# blacklist spi and i2c by default (many users don't need them)
 
 #blacklist spi-bcm2708
-#blacklist i2c-bcm2708" > etc/modprobe.d/raspi-blacklist.conf
+#blacklist i2c-bcm2708" > /etc/modprobe.d/raspi-blacklist.conf
 echo "- Done"
 
 echo "### Preparing next boot... ###"

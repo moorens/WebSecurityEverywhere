@@ -1832,6 +1832,7 @@ loadSettings()
 
 hostapdConfig = ParseINI('/etc/hostapd/hostapd.conf')
 if WifiAPkeyChangeonStartup == True:
+	hostapdConfig = ParseINI('/etc/hostapd/hostapd.conf')
 	key = generateKey(WifiAPkeyLenght)
 	hostapdConfig['global']['wpa_passphrase'] = key
 	write_hostapdConfig('/etc/hostapd/hostapd.conf')
